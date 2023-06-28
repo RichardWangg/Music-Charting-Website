@@ -1,0 +1,32 @@
+form {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: gray;
+}
+
+form:focus-within {
+  font-weight: bold;
+}
+
+form div {
+  position: absolute;
+  margin-top: 35px;
+  right: 10px;
+}
+
+div input {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 9.5px;
+  margin-right: 16px;
+  font-size: 17px;
+
+  border-bottom: 1px white solid;
+  background-color: #1c2544;
+}
+
+div input:focus {
+  outline: none;
+}
