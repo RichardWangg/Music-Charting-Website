@@ -1,0 +1,28 @@
+.card img {
+  width: 220px;
+  height: 220px;
+
+  text-align: left;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 220px;
+  gap: 0.5em;
+
+  padding: 1rem;
+  font-family: "DM sans", sans-serif;
+  font-size: 16px;
+}
+
+.card button {
+  padding: 0.5em;
+  background-color: rgb(1, 5, 27);
+  border-radius: 4px;
+  transition-duration: 1000ms;
+}
+.card b {
+  font-family: "DM sans", sans-serif;
+}
