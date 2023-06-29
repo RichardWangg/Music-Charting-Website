@@ -1,0 +1,45 @@
+//get album id and then use the id to get the tracklist (spotify api)
+const extractAlbumId = async (name, artist) => {
+    const url = 'https://spotify23.p.rapidapi.com/search/';
+    const querystring = {
+        q: `${name} ${artist}`,
+        type: 'multi',
+        offset: '0',
+        limit: '1',
+        numberOfTopResults: '5'
+    };
+    const headers = {
+        'X-RapidAPI-Key': '8fdc060475msh59dca9a6d7cef8cp109777jsn3485d134fba7',
+        'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+    };
+
+    const response = await fetch(`${url}?${new URLSearchParams(querystring)}`, {
+        headers
+    });
+    const data = await response.json();
+
+    const albumUri = data.albums.items[0].data.uri;
+    const albumId = albumUri.split(':')[2];
+    return albumId;
+};
+
+const fetchAlbumIds = async () => {
+    const albums = data.albums;
+    const albumIds = [];
+
+    for (const album of albums) {
+        const { name, artist } = album;
+        const albumId = await extractAlbumId(name, artist);
+        albumIds.push(albumId);
+    }
+
+    return albumIds;
+};
+
+fetchAlbumIds()
+    .then(albumIds => {
+        console.log('Album IDs:', albumIds);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
