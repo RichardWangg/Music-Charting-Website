@@ -1,6 +1,8 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Details from "./Details";
+import { useNavigate } from 'react-router-dom';
+
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,10 +17,12 @@ const ListItem = (props) => {
     setDetails(props);
   }
 
+
   return (
     <div className="card">
       <img src={props?.cover_art_url} alt={props?.name} />
       <button onClick={handleLoadDetails}>
+
         <b>See Details</b>
       </button>
       {details ? <Details {...details} /> : null}

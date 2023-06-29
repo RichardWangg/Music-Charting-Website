@@ -20,6 +20,7 @@ const router = createBrowserRouter([
     path: "/top50songs",
     element: <SongsList />,
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

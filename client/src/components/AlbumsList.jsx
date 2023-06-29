@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AlbumsListItem from "./AlbumsListItem";
+import { useNavigate } from 'react-router-dom';
 
 import './AlbumsList.css';
 
@@ -11,6 +12,12 @@ const AlbumsList = () => {
             .then((response) => response.json())
             .then((data) => setAlbums(data));
     }, []);
+
+    const navigate = useNavigate();
+
+    function openPage() {
+        navigate("/top50albums")
+    }
 
     return (
         <div className="list">

@@ -1,0 +1,97 @@
+#navbar {
+    position: fixed;
+    padding: 0rem 1rem 0rem 0rem;
+}
+
+.id-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+    z-index: 10;
+}
+
+.title {
+    position: absolute;
+    left: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2rem;
+
+    text-decoration: none;
+}
+
+.title:visited {
+    color: white;
+}
+
+.id-container h2 {
+    font-size: 26px;
+}
+
+.id-container img {
+    margin: 0.7rem 0.5rem 0rem 0.1rem;
+    width: 28px;
+    height: 28px;
+}
+
+.links-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.navbar-links-text:hover {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-links-text {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-links-text.active {
+    opacity: 1;
+}
+
+.navbar-links-text:visited {
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .id-container {
+        justify-content: flex-end;
+    }
+
+    .links-container {
+        margin-right:
+            12px;
+    }
+
+    .title {
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .title h2,
+    .navbar-links-text {
+        font-size: 20x;
+    }
+}
+
+@media (max-width: 400px) {
+    .title h2 {
+        display: none;
+    }
+}

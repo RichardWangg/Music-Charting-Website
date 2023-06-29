@@ -1,0 +1,91 @@
+body {
+  display: block;
+  width: 100% !important;
+}
+
+.container {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(21, 38, 41, 1) 62%,
+      rgba(28, 37, 68, 1) 100%);
+  text-align: center;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8;
+}
+
+.logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+div {
+  font-size: 28px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.search-bar {
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 4rem 1rem 0rem 4rem;
+}
+
+form:focus-within {
+  font-weight: bold;
+}
+
+div input {
+  padding: 6px;
+  border: none;
+  font-size: 16px;
+  color: rgba(255, 255, 255, .5);
+  border-bottom: 1px white solid;
+  background-color: transparent;
+}
+
+div input:placeholder {
+  color: rgba(255, 255, 255, .5);
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+div input:focus {
+  outline: none;
+}
+
+@media (max-width: 600px) {
+
+  .search-bar {
+    justify-content: center;
+    margin: auto;
+
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+  }
+
+}
