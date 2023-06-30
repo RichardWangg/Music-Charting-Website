@@ -1,16 +1,18 @@
 import "./Details.css";
 import TrackList from "./TrackList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const Details = ({ name, artist, release_date }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [albumId, setAlbumId] = useState('')
 
-  const loadAlbumId = (id) => {
-    //fetch albumid from graphql api
-
-  }
-
+  useEffect(() => {
+    const loadAlbumId = async (id) => {
+      //use id from rest api to fetch albumid from graphql api
+      setAlbumId('whatever the album id is');
+    }
+  }, [])
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -38,7 +40,7 @@ const Details = ({ name, artist, release_date }) => {
                 </div>
                 <div className="modal-body" style={{ maxHeight: '500px', overflowY: 'auto' }}>
                   <TrackList id="151w1FgRZfnKZA9FEcg9Z3" />
-                  {/* <TrackList id={loadAlbumId} /> */}
+                  {/* <TrackList id={albumId} /> */}
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import ListItem from "../components/ListItem";
+import ListItem from "../components/ListItem_Songs";
 import { default as Logo } from "../assets/logo.svg";
 
 import "./List.css";

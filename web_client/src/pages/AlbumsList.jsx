@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ListItem from "../components/ListItem";
+import ListItem from "../components/ListItem_Albums";
 import NavBar from "../components/NavBar";
 
 import { default as Logo } from "../assets/logo.svg";

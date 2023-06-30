@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import Details from "./Details";
+import Details from "./Details_Albums";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
