@@ -7,19 +7,72 @@
   font-size: 14px;
   font-family: "DM sans", sans-serif;
 
-  opacity: 0; /* make things invisible upon start */
-  animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  opacity: 0;
+  /* make things invisible upon start */
+  animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
 
-  animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
 
   animation-duration: 1s;
   animation-delay: 20ms;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(28, 37, 68, 0.95) 100%);
+  padding: 20px;
+  border-radius: 0.5rem;
+  z-index: 9999;
+  display: flex;
+}
+
+
+
+.lyrics {
+  font-size: 1rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+  /* Adjust the z-index value as needed */
+}
+
+.modal-header button {
+  background: none !important;
+  background-color: none !important;
+  border-radius: none !important;
+  border: none !important;
+  font-size: 1.5rem;
+  transition-duration: 0.3s !important;
+  opacity: 0.75;
+  transition: ease-in-out;
+}
+
+.modal-header button:hover {
+  opacity: 1;
+  transition: ease-in-out;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

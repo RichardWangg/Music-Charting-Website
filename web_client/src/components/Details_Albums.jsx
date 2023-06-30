@@ -24,9 +24,8 @@ const Details = ({ name, artist, release_date }) => {
 
   return (
     <div className="details">
-      <b>Title:</b> {name}
-      <b>Artist:</b> {artist}
-      <b>Released on:</b> {release_date}
+      {name} by {artist}
+      <b style={{ display: "inline" }}>Released: </b> {release_date}
 
       <button onClick={handleOpenModal}>Full TrackList</button>
 
@@ -36,7 +35,7 @@ const Details = ({ name, artist, release_date }) => {
             <div className="modal-dialog modal-xl modal-dialog-centered">
               <div className="modal-content">
                 <div className="modal-header">
-                  <button type="button" className="btn-close" onClick={handleCloseModal}></button>
+                  <button type="button" className="btn-close" onClick={handleCloseModal}> X </button>
                 </div>
                 <div className="modal-body" style={{ maxHeight: '500px', overflowY: 'auto' }}>
                   <TrackList id="151w1FgRZfnKZA9FEcg9Z3" />

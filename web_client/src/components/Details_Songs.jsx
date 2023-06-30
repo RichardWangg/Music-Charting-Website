@@ -63,7 +63,7 @@ const Details = ({ name, artist, release_date }) => {
                         <div className="modal-dialog modal-xl modal-dialog-centered">
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <button type="button" className="btn-close" onClick={handleCloseModal}></button>
+                                    <button type="button" className="btn-close" onClick={handleCloseModal}> X </button>
                                 </div>
                                 <div className="modal-body" style={{ maxHeight: '500px', overflowY: 'auto' }}>
                                     {lyrics}
