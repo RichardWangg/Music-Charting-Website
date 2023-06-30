@@ -10,9 +10,11 @@ import "./ListItem.css";
 
 const ListItem = (props) => {
   const [details, setDetails] = useState(null);
+  const [buttonState, setButtonState] = useState(false);
 
   function handleLoadDetails() {
     setDetails(props);
+    setButtonState(!buttonState);
   }
 
   return (
@@ -22,7 +24,7 @@ const ListItem = (props) => {
       <button onClick={handleLoadDetails}>
         <b>See Details</b>
       </button>
-      {details ? <Details {...details} /> : null}
+      {details && buttonState ? <Details {...details} /> : null}
     </div>
   );
 };

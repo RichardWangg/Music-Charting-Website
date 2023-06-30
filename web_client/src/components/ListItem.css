@@ -29,8 +29,13 @@
   padding: 0.5em;
   background-color: rgb(1, 5, 27);
   border-radius: 4px;
-  transition-duration: 1000ms;
+  transition-duration: 0.3s;
   margin-bottom: 1rem;
+}
+
+.card button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(219, 219, 219);
 }
 
 .card b {

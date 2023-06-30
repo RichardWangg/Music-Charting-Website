@@ -29,9 +29,10 @@
   border-radius: 0.5rem;
   z-index: 9999;
   display: flex;
+  max-width: 70rem;
+  min-width: 40rem;
+  opacity: 1;
 }
-
-
 
 .lyrics {
   font-size: 1rem;
@@ -60,12 +61,18 @@
   transition-duration: 0.3s !important;
   opacity: 0.75;
   transition: ease-in-out;
+  align-self: flex-start;
 }
 
 .modal-header button:hover {
   opacity: 1;
   transition: ease-in-out;
   cursor: pointer;
+}
+
+.modal-header {
+  justify-content: left;
+  align-items: left;
 }
 
 @keyframes fadeIn {

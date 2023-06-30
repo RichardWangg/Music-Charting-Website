@@ -1,22 +1,22 @@
-import PropTypes from "prop-types";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import TrackListItem from "./TrackListItem";
 import './TrackList.css'
 
-const TrackList = (props) => {
+const TrackList = ({ albumid }) => {
+    console.log(albumid)
     const [results, setResults] = useState(null)
 
     const options = {
         method: 'GET',
         url: 'https://spotify23.p.rapidapi.com/album_tracks/',
         params: {
-            id: '151w1FgRZfnKZA9FEcg9Z3', //REPLACE THIS WITH {} ALBUMID FROM YOUR FETCH TO GET ALBUMID IN DETAILS.JSX (the prop of this TrackList component)
+            id: `${albumid}`, //REPLACE THIS WITH {} ALBUMID FROM YOUR FETCH TO GET ALBUMID IN DETAILS.JSX (the prop of this TrackList component)
             offset: '0',
-            limit: '300'
+            limit: '500'
         },
         headers: {
-            'X-RapidAPI-Key': '8fdc060475msh59dca9a6d7cef8cp109777jsn3485d134fba7',
+            'X-RapidAPI-Key': 'dd09aefd22mshf682ee87fc9084cp1e83f5jsnba4dadbd5c19',
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
         }
     };
@@ -53,9 +53,5 @@ const TrackList = (props) => {
         </section>
     )
 }
-
-TrackList.propTypes = {
-    id: PropTypes.number.isRequired
-};
 
 export default TrackList;

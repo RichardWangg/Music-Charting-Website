@@ -5,7 +5,8 @@ import './TrackList.css'
 
 const TrackListItem = (props) => {
     const [lyrics, setLyrics] = useState([]);
-    const [showLyrics, setShowLyrics] = useState(false)
+    const [showLyrics, setShowLyrics] = useState(false);
+    const [buttonState, setButtonState] = useState(false);
 
     const convertUri = (uri) => uri.replace('spotify:track:', '');
 
@@ -25,7 +26,7 @@ const TrackListItem = (props) => {
             trackId: `${songid}`
         },
         headers: {
-            'X-RapidAPI-Key': '8fdc060475msh59dca9a6d7cef8cp109777jsn3485d134fba7',
+            'X-RapidAPI-Key': 'dd09aefd22mshf682ee87fc9084cp1e83f5jsnba4dadbd5c19',
             'X-RapidAPI-Host': 'spotify-scraper.p.rapidapi.com'
         }
     };
@@ -41,17 +42,20 @@ const TrackListItem = (props) => {
         }
     }
 
-    const handleShowLyrics = () => {
+    const handleClick = () => {
         loadLyrics(songid);
         setShowLyrics(true);
+        setButtonState(!buttonState)
     }
 
     return (
-        <div>
-            {props.name}
-            {convertMilliseconds(props.totalMilliseconds)}
-            <button onClick={handleShowLyrics}> Show/Hide Lyrics </button>
-            {showLyrics ?
+        <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ display: "flex" }}>
+                <div style={{ color: "white", width: "80%" }}>{props.name}</div>
+                <div> {convertMilliseconds(props.totalMilliseconds)} </div>
+            </div>
+            <button onClick={handleClick} style={{ width: "20%" }}> Show/Hide Lyrics </button>
+            {showLyrics && buttonState ?
                 <div className="lyrics">
                     {lyrics.map((line, index) => (
                         <p key={index}>{line}</p>
