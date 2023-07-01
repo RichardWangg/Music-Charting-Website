@@ -1,7 +1,6 @@
 To run the application, follow the following steps
 
 1. Go to the 'api' directory (cd api) and run the following commands:
-        npm install cors
         npm install
         npm run dev
 
