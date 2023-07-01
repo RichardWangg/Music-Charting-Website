@@ -5,7 +5,6 @@ const Data = require('./data')
 const cors = require('cors');
 
 const data = Data.data;
-app.use(cors());
 
 const {
     GraphQLSchema,
@@ -16,6 +15,7 @@ const {
     GraphQLNonNull
 } = require('graphql')
 const app = express()
+app.use(cors());
 
 const formatError = new FormatError([
     {
