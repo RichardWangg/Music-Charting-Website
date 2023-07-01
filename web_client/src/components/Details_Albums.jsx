@@ -74,7 +74,7 @@ const Details = ({ id, name, artist, release_date, cover_art_url }) => {
                     </div>
                   </div>
                 </div>
-                <div className="modal-body" style={{ maxHeight: '500px', overflowY: 'auto' }}>
+                <div className="modal-body" style={{ maxHeight: '30vh', overflowY: 'auto' }}>
                   <TrackList albumid={albumId.toString()} />
                 </div>
               </div>

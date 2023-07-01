@@ -31,6 +31,7 @@
   display: flex;
   max-width: 70rem;
   min-width: 40rem;
+  max-height: 80vh;
   opacity: 1;
 }
 
