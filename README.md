@@ -21,3 +21,6 @@ To run tests, do
         npm test
 
 Enjoy!
+
+Here is a short demo video:
+https://github.com/user-attachments/assets/6195067d-eab8-4f9a-9bff-9bb09790d929
